@@ -1,5 +1,6 @@
 package dev.maiky.infinityparkour.game;
 
+import com.sun.org.apache.bcel.internal.generic.FADD;
 import dev.maiky.infinityparkour.Main;
 import dev.maiky.infinityparkour.game.data.PlayerData;
 import fr.minuskube.netherboard.Netherboard;
@@ -172,15 +173,19 @@ public class Game {
 
 		Block currentBlock = current.getBlock();
 
-		int direction = random.nextInt(4);
+		int direction = random.nextInt(8);
 
 		BlockFace face;
 		if (direction == 0) face = BlockFace.NORTH;
-		else if (direction == 1) face = BlockFace.EAST;
-		else if (direction == 2) face = BlockFace.SOUTH;
-		else face = BlockFace.WEST;
+		else if (direction == 1) face = BlockFace.NORTH_EAST;
+		else if (direction == 2) face = BlockFace.EAST;
+		else if (direction == 3) face = BlockFace.SOUTH_EAST;
+		else if (direction == 4) face = BlockFace.SOUTH;
+		else if (direction == 5) face = BlockFace.SOUTH_WEST;
+		else if (direction == 6) face = BlockFace.WEST;
+		else face = BlockFace.NORTH_WEST;
 
-		int distance = random.nextInt(3) + 2;
+		int distance = random.nextInt(3) + 1;
 
 		for (int i = 0; i < distance; i++) {
 			currentBlock = currentBlock.getRelative(face);
