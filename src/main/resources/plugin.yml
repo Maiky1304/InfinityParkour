@@ -1,0 +1,7 @@
+name: InfinityParkour
+version: ${project.version}
+main: dev.maiky.infiniteparkour.Infiniteparkour
+api-version: 1.16
+authors: [ Maiky1304 ]
+description: Trial for DevRoom
+depend: ["helper"]
