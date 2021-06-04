@@ -25,7 +25,7 @@ public class ParkourGUI extends Gui {
 
 	private MenuScheme buttons = new MenuScheme()
 			.mask("000000000")
-			.mask("001000100")
+			.mask("001010100")
 			.mask("000000000");
 
 	@Override
